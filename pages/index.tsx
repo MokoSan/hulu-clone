@@ -6,7 +6,7 @@ import Nav from '../components/Nav'
 import Results from '../components/Results'
 import requests from '../utils/requests'
 
-const Home: NextPage = ({ results } : { results : any }) => {
+const Home : NextPage<Results> = ( results ) => {
   return (
     <div> 
       <Head>
@@ -18,7 +18,7 @@ const Home: NextPage = ({ results } : { results : any }) => {
 
       <Nav />
 
-      <Results results={results} />
+      <Results results={results.results} />
     </div>
   )
 }
